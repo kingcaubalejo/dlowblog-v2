@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown on TeXify3</title>
+    <link>http://localhost:1313/tags/markdown/</link>
+    <description>Recent content in Markdown on TeXify3</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Year - New Website</title>
+      <link>http://localhost:1313/posts/new-website/</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/new-website/</guid>
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
+&lt;p&gt;Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Exierant elisi ambit vivere dedere&lt;/li&gt;
+&lt;li&gt;Duce pollice&lt;/li&gt;
+&lt;li&gt;Eris modo&lt;/li&gt;
+&lt;li&gt;Spargitque ferrea quos palude&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Rursus nulli murmur; hastile inridet ut ab gravi sententia! Nomine potitus silentia flumen, sustinet placuit petis in dilapsa erat sunt. Atria tractus malis.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Comas hunc haec pietate fetum procerum dixit&lt;/li&gt;
+&lt;li&gt;Post torum vates letum Tiresia&lt;/li&gt;
+&lt;li&gt;Flumen querellas&lt;/li&gt;
+&lt;li&gt;Arcanaque montibus omnes&lt;/li&gt;
+&lt;li&gt;Quidem et&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;vagus-elidunt&#34;&gt;Vagus elidunt&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Canons_of_page_construction#Van_de_Graaf_canon&#34;&gt;The Van de Graaf Canon&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;mane-refeci-capiebant-unda-mulcebat&#34;&gt;Mane refeci capiebant unda mulcebat&lt;/h3&gt;
+&lt;p&gt;Victa caducifer, malo vulnere contra dicere aurato, ludit regale, voca! Retorsit colit est profanae esse virescere furit nec; iaculi matertera et visa est, viribus. Divesque creatis, tecta novat collumque vulnus est, parvas. &lt;strong&gt;Faces illo pepulere&lt;/strong&gt; tempus adest. Tendit flamma, ab opes virum sustinet, sidus sequendo urbis.&lt;/p&gt;
+&lt;p&gt;Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae vulnus haerentia iuste et exercebat, sui et.&lt;/p&gt;
+&lt;p&gt;Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel &lt;strong&gt;mitis temploque&lt;/strong&gt; vocatus, inque alis, &lt;em&gt;oculos nomen&lt;/em&gt; non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides &lt;strong&gt;parte&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>What file upload: multiple</title>
+      <link>http://localhost:1313/posts/file-upload/</link>
+      <pubDate>Thu, 19 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/file-upload/</guid>
+      <description>&lt;h2 id=&#34;a-serious-headache-tldr&#34;&gt;A Serious Headache: TL;DR&lt;/h2&gt;
+&lt;p&gt;I perform like a solutions architect with a backend engineer day-to-day job. Also doing some documentations, yeah I know some of us hate docus, that allow me to walk any engineer through a feature I am working on. Currently I program in a serverless framework using nodejs. And I was tasked to do a multiple file uploading because the previous maintainer
+did not do it for some reason. And we are having multiple issues about our single file uploading. That&amp;rsquo;s on top of the &amp;ldquo;priority&amp;rdquo; tasks they&amp;rsquo;ve mentioned.&lt;/p&gt;
+&lt;p&gt;I started researching about it and how I can integrate it to serverless framework. Where in a single lambda function could handle a hard limit 10 mb of data in total at once or single invocation.&lt;/p&gt;
+&lt;p&gt;It might be a well-knowed problem. This task could be an easy peasy for other developers, making an HTTP file uploading. But how does file uploading works was my question.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-file-upload&#34;&gt;What is file upload?&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloudinary.com/guides/front-end-development/file-upload-as-a-service-how-it-works-and-5-leading-solutions#:~:text=File%20uploads%20can%20be%20initiated,remote%20server%20or%20storage%20location&#34;&gt;File Upload&lt;/a&gt; refers to the process of transferring digital files from a local device or machine to a remote server or storage location using a network. Given that, I need a solution to steamline the process.
+The current design was there&amp;rsquo;s a 2 api calling the &lt;code&gt;process file&lt;/code&gt; and &lt;code&gt;store file&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The upload api will be triggered and &lt;code&gt;process file&lt;/code&gt; will take place and the &lt;code&gt;store file&lt;/code&gt; will return the signedUrl and it&amp;rsquo;s up to the Frontend/Client how to consume the data returned. I spent maybe 40 ci/cd pipelines going back and forth updating and testing the frameworks and libraries.&lt;/p&gt;
+&lt;h5 id=&#34;libraries-considered&#34;&gt;Libraries considered&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/package/multer&#34;&gt;multer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/package/busboy&#34;&gt;busboy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Just don&amp;rsquo;t do it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;code-block-with-backticks&#34;&gt;Code block with backticks&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;html
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt;
+  &amp;lt;title&amp;gt;Example HTML5 Document&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;p&amp;gt;Test&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Not Your Typical Tech Post</title>
+      <link>http://localhost:1313/posts/not-typical/</link>
+      <pubDate>Mon, 30 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/not-typical/</guid>
+      <description>&lt;h4 id=&#34;introduction&#34;&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;Hi there, 2024 is closing and an increment of 1 will open. It&amp;rsquo;s been a crazy ride in my career and as a human being. There are
+some few highlights that I would like to mention before this year closes.&lt;/p&gt;
+&lt;h4 id=&#34;dont-rush-things&#34;&gt;Don&amp;rsquo;t Rush Things&lt;/h4&gt;
+&lt;p&gt;I mean, rush package manager is quite odd if you are a bias with npm. But hey, it’s not about tech! I realized that I always want to do things in rush. I haste in learning new tech, programming language, different domains, and many more. In the beginning, I thought I was making progress, but little did I know, I am rushing and it makes things slower. Breaking into tech is not an easy path to take. It’s a vast ocean of different possibilities. Rowing your boat without any direction is worse than failing with direction.&lt;/p&gt;
+&lt;h4 id=&#34;i-got-married&#34;&gt;I got married&lt;/h4&gt;
+&lt;p&gt;Fun fact, I don’t like English. Not because I can’t speak and write it, I just find it difficult. Fortunately, I married an English subject teacher. From the time I began writing this, she will for sure check the grammar of this blogpost. The wedding preparation was tremendously difficult. I can’t help but say “Thank God” as we have successfully pulled it off. This is the most significant thing that happened to me this 2024.&lt;/p&gt;
+&lt;h4 id=&#34;i-am-a-christian-and-believes-in-the-message&#34;&gt;I am a Christian and believes in the Message&lt;/h4&gt;
+&lt;p&gt;I stand on my faith, and will die with it.&lt;/p&gt;
+&lt;h4 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s next?&lt;/h4&gt;
+&lt;p&gt;No one knows what the future holds. Only Him knows what’s next. As they say, don’t fight the current. To be honest, I have a lot of dreams and ambitions. However, knowing that I won’t carry it to my grave makes me think more about it. But I will be selfish if I will not do something for others.&lt;/p&gt;
+&lt;h4 id=&#34;other-highlights&#34;&gt;Other highlights.&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Lay-off knocked on my door.&lt;/li&gt;
+&lt;li&gt;Down to my last peso.&lt;/li&gt;
+&lt;li&gt;Struggling emotionally.&lt;/li&gt;
+&lt;li&gt;Impostor syndrome.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Nonetheless, 2024 has been a great ride. And will expect more this 2025. To God be the Glory!&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>I Almost Became A Victim og Phishing</title>
+      <link>http://localhost:1313/posts/phishing-victim-almost/</link>
+      <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/phishing-victim-almost/</guid>
+      <description>&lt;h4 id=&#34;introduction&#34;&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;I’ve been in the development industry for almost 7 years now, as of the time I’m writing this blog. It’s really fun to watch how technology evolves. From deploying our code manually to a server using FTP and FileZilla, to configuring Docker images and spinning up instances through CloudFormation, Terraform, or CDK, with pipelines configured in either GitLab or GitHub.&lt;/p&gt;
+&lt;p&gt;I believe in learning through experience since most of the knowledge I’ve gained is not from academic excellence, but from my mistakes in the software realm. Exchanging data from one memory to another was fascinating, but not as fascinating as almost getting hacked.&lt;/p&gt;
+&lt;p&gt;Yes, I almost got &lt;strong&gt;hacked&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In a cozy cold office, I am working on authorizer version 2. It was around 12:25pm when I saw an email from this domain &lt;strong&gt;no-reply@sharepointonline[.]corn&lt;/strong&gt;. Saying,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A large number of files have been deleted - take action now&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.ap-southeast-1.amazonaws.com/kwaliti-ph.com/Screenshot+2024-08-10+at+6.11.47+PM.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;background&#34;&gt;Background&lt;/h4&gt;
+&lt;p&gt;I finished training regarding cyber security, penetration testing basics, and ethical hacking entry level. I have basic knowledge about cyber threats to begin with.&lt;/p&gt;
+&lt;p&gt;But yeah, I am so tired and stressed about the task yesterday.&lt;/p&gt;
+&lt;p&gt;So I clicked the link and redirected to a webpage that is similar to sharepoint, or microsoft 365 login page. Out of nervousness, I entered my email that is not a 365 or even a sharepoint  related and a random password, Silly me. That helped not to expose my ms 365 office or sharepoint email and password. However, it exposed my last name like any other email address, and the password I normally used to test some dummy accounts. That helped me not to expose anything, Phew!&lt;/p&gt;
+&lt;p&gt;It turned out that it was a simulation of our partner security company, and I failed to be a responsible and vigilant internet user. Almost.&lt;/p&gt;
+&lt;h4 id=&#34;lesson-learned&#34;&gt;Lesson Learned&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Never Be Too Complacent&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Stay vigilant. Overconfidence can lead to oversight.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Trust, but Verify&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Trust no one completely. Always verify before taking action.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Establish Clear Procedures&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;A well-defined process ensures consistency and reduces errors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Validate All Digital Information&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Don’t take anything at face value—always double-check what you receive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This experience taught me a valuable lesson: No matter how much exposure you have to technology, there will always come a day when you&amp;rsquo;re tested.&lt;/p&gt;
+&lt;p&gt;Live and learn.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Being a lecturer is awesome: Really?</title>
+      <link>http://localhost:1313/posts/i-am-also-a-lecturer/</link>
+      <pubDate>Sat, 22 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/i-am-also-a-lecturer/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;As humans, we have made enormous progress in technology, turning from impossible to possible. From stunning graphics and real-time chat to complex computation that require calculations that are scientific.&lt;/p&gt;
+&lt;p&gt;A famous french visual artist once said.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;L’exactitude n’est pas la vérité.&lt;br&gt;
+Exactitude is not the truth.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It seems that it is also the same in computing. There a figures or numbers that appears to be a precise but hide approximations.&lt;/p&gt;
+&lt;p&gt;And this leads to an important concept in computing: &lt;strong&gt;Floating-Point Decimal Precision&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Okay? What is it?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-floating-point-decimal-precision&#34;&gt;What is Floating-Point Decimal Precision?&lt;/h2&gt;
+&lt;p&gt;It is a number that represents real numbers (numbers with fractional parts) using a format similar to scientific-notation but in base 2 (binary) instead of base 10 (decimal)&lt;/p&gt;
+&lt;p&gt;Alright? I need more.&lt;/p&gt;
+&lt;p&gt;Floating-point numbers are stored as scientific notation in base 2.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+Value = sign x mantissa x base^exponent
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;E.g: in decimal:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+1.23 x 10^2 = 123
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;E.g: in binary: floating-point numbers look more like:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+1.011 x 2^4
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This allows computers to efficiently represent very large and very small numbers-but not all decimal values can be represented exactly in binary.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-do-floating-point-precision-issues-exist&#34;&gt;Why do floating-point precision issues exist?&lt;/h2&gt;
+&lt;h3 id=&#34;the-problem-binary-representation&#34;&gt;The Problem: Binary Representation&lt;/h3&gt;
+&lt;p&gt;Many decimal numbers that are simple for humans cannot be represented exactly in binary.&lt;/p&gt;
+&lt;p&gt;E.g:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+0.1 (decimal) = 0.00011001100110011... (binary, repeating forever)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Since computers have limited memory, they must truncate or round this repeating binary value. That small rounding error is where problems begin.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;common-issues-with-floating-point-decimals&#34;&gt;Common Issues with Floating-Point Decimals&lt;/h2&gt;
+&lt;h3 id=&#34;precision-and-rounding-errors&#34;&gt;Precision and Rounding Errors&lt;/h3&gt;
+&lt;p&gt;Because of rounding, calculations may produce slightly incorrect results.&lt;/p&gt;
+&lt;p&gt;E.g:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// false
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Actual result:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;0.30000000000000004
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Each operation introduces a tiny error, and over many calculations, those errors can accumulate.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;limited-precision&#34;&gt;Limited Precision&lt;/h3&gt;
+&lt;p&gt;Floating-point numbers have a fixed number of bits to store values. Once that limit is reached:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Extra digits are dropped&lt;/li&gt;
+&lt;li&gt;Accuracy decreases for very long or very small numbers&lt;/li&gt;
+&lt;li&gt;Exact equality comparisons become unreliable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;comparison-problems&#34;&gt;Comparison Problems&lt;/h3&gt;
+&lt;p&gt;Comparing floating-point numbers directly using &lt;code&gt;==&lt;/code&gt; or &lt;code&gt;===&lt;/code&gt; is dangerous.&lt;/p&gt;
+&lt;p&gt;Instead of:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;B&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should compare with a tolerance (epsilon):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// false
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.6&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;result&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;result&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(Math.&lt;span style=&#34;color:#a6e22e&#34;&gt;abs&lt;/span&gt;((&lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1e-9&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;what-is-the-ieee-754-standard&#34;&gt;What Is the IEEE 754 Standard?&lt;/h2&gt;
+&lt;p&gt;The IEEE 754 standard defines how floating-point numbers are stored and computed across almost all modern systems.&lt;/p&gt;
+&lt;h3 id=&#34;key-features-of-ieee-754&#34;&gt;Key Features of IEEE 754&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Defines single precision (32-bit) and double precision (64-bit)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Specifies rounding rules&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Handles special values:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NaN (Not a Number)&lt;/li&gt;
+&lt;li&gt;Infinity&lt;/li&gt;
+&lt;li&gt;-Infinity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;why-it-matters&#34;&gt;Why It Matters&lt;/h3&gt;
+&lt;p&gt;Because almost all programming languages follow IEEE 754, floating-point behavior is consistent across platforms—but the precision limitations are also universal.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;practical-tips-for-handling-floating-point-precision&#34;&gt;Practical Tips for Handling Floating-Point Precision&lt;/h2&gt;
+&lt;h3 id=&#34;1-avoid-floating-point-for-money&#34;&gt;1. Avoid Floating-Point for Money&lt;/h3&gt;
+&lt;p&gt;Never use floating-point numbers for financial calculations.&lt;/p&gt;
+&lt;p&gt;Instead:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use integers (e.g., cents instead of dollars)&lt;/li&gt;
+&lt;li&gt;Use decimal libraries (e.g., BigDecimal, Decimal.js)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-use-rounding-carefully&#34;&gt;2. Use Rounding Carefully&lt;/h3&gt;
+&lt;p&gt;Round values only when displaying, not during internal calculations.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Number(&lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;toFixed&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;3-compare-using-epsilon&#34;&gt;3. Compare Using Epsilon&lt;/h3&gt;
+&lt;p&gt;Always compare floating-point numbers with a tolerance.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Floating-point is not precise by nature. With the help of the standard IEEE 754, it becomes precise.&lt;/p&gt;
+&lt;p&gt;I saw a video that explains it very well. Might as well share it here as an additional great resource.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=dQhj5RGtag0&#34;&gt;https://www.youtube.com/watch?v=dQhj5RGtag0&lt;/a&gt;&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>What&#39;s up? I am back!</title>
+      <link>http://localhost:1313/posts/back-again/</link>
+      <pubDate>Sat, 22 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/back-again/</guid>
+      <description>&lt;p&gt;For the past three months of being inactive in posting, I realized how fast time flies. I participated in some activities at our local church. We created an online registration system, and I designed its infrastructure. We heavily depend on AWS as the infrastructure is purely based on AWS services. I can&amp;rsquo;t show you the images or the design because, currently, I don&amp;rsquo;t know how to.&lt;/p&gt;
+&lt;p&gt;I opened a &lt;a href=&#34;https://github.com/austingebauer/devise/issues/34&#34;&gt;ticket&lt;/a&gt; issue to the author of the theme that I am using and hopefully I get a reply, you&amp;rsquo;ll notice if I got some answers If my posts will have some pictures on it.&lt;/p&gt;
+&lt;h2 id=&#34;what-do-we-expect&#34;&gt;What do we expect?&lt;/h2&gt;
+&lt;p&gt;Nothing much, maybe I&amp;rsquo;ll post some tutorials. I&amp;rsquo;m currently working on a side project and looking for other things to do besides engineering software. To give you an overview, I am looking forward to creating a series of development projects from scratch and making a course. However, due to skill issues, I need to put those plans on hold and study one thing at a time. Until then, consuming text-based content will be my priority as I don&amp;rsquo;t really want to expose my face.&lt;/p&gt;
+&lt;p&gt;Anyways, will keep writing until internet expires. Cheers!&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Fire fighting after NS transfer: A crazy one.</title>
+      <link>http://localhost:1313/posts/fire-fighting/</link>
+      <pubDate>Tue, 06 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/fire-fighting/</guid>
+      <description>&lt;h2 id=&#34;i-became-a-fire-fighter&#34;&gt;I became a fire fighter.&lt;/h2&gt;
+&lt;p&gt;We had a task to transfer our new website designed in Wix to our current domain. So Wix is a CMS tool for me; it has NS (nameservers) and other domain-related stuff. Our architecture is like this: we have the domain &lt;a href=&#34;https://www.mydomain.com&#34;&gt;www.mydomain.com&lt;/a&gt;, which has multiple subdomains attached to it. Everything was working fine until we transferred the nameservers of Wix to our domain hosting.&lt;/p&gt;
+&lt;h2 id=&#34;but-let-me-narrate-how-a-dns-works&#34;&gt;But let me narrate how a DNS works.&lt;/h2&gt;
+&lt;p&gt;DNS is like the internet&amp;rsquo;s address book. When you type a website address (like google.com) into your browser, your computer needs to know the corresponding IP address (like 192.0.2.1) of the server where that website is hosted. Here&amp;rsquo;s how it works:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Request Initiation:&lt;/strong&gt; Your computer sends a request to a DNS resolver (like your internet service provider&amp;rsquo;s DNS server) asking for the IP address associated with the domain name you entered.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. DNS Lookup:&lt;/strong&gt; If the resolver knows the IP address already, great! It sends it back to your computer. If not, it starts a series of lookups.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Recursive Lookup:&lt;/strong&gt; The resolver may have to ask other DNS servers. It starts with the root DNS servers, then moves to the top-level domain (like &amp;ldquo;.com&amp;rdquo;), then the authoritative DNS servers responsible for the specific domain (like &amp;ldquo;google.com&amp;rdquo;). Each step narrows down the search until it finds the IP address.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. Response:&lt;/strong&gt; Once the resolver finds the IP address, it sends it back to your computer.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5. Caching:&lt;/strong&gt; To speed up future requests, your computer and the resolver might cache the IP address for a while so they don&amp;rsquo;t have to go through the whole process again.&lt;/p&gt;
+&lt;p&gt;By the way, we are using GoDaddy, and everything there seems to be easy. I led the transfer alongside my manager, who was there to witness the procedure. However, after some time, we experienced an outage. A fire was burning our APIs. The funny part is that we did it without thinking that it is Business as Usual (BAU). In short, we have live users. Brave, so brave. I quickly ran through our DNS, which is with GoDaddy, and reverted back all the changes. But since the issue here is DNS, I had nothing else to do but wait for it to finish resolving for other users. Going through this left me with a bunch of valuable lessons.&lt;/p&gt;
+&lt;h4 id=&#34;lesson-learned&#34;&gt;Lesson Learned&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Don&amp;rsquo;t do anything silly if it is in BAU (Business As Usual).&lt;/li&gt;
+&lt;li&gt;Check the traffic of the domain before doing anything crazy.&lt;/li&gt;
+&lt;li&gt;Involve more eyes in the change.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It seems like everyday is day to learn new things.&lt;/p&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>The New Beginning</title>
+      <link>http://localhost:1313/posts/new-beginning/</link>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/new-beginning/</guid>
+      <description>&lt;h2 id=&#34;wtf-when-things-follow&#34;&gt;WTF! (When Things Follow)&lt;/h2&gt;
+&lt;p&gt;Learning is an ongoing journey, a path that unfolds with every step we take. For me, programming isn&amp;rsquo;t just about writing lines of code; it&amp;rsquo;s a creative outlet, a means to express the intricate interplay of my thoughts and emotions.&lt;/p&gt;
+&lt;p&gt;Imagine programming as a vast canvas, waiting to be adorned with the brushstrokes of logic and creativity. Each line of code is like a stroke of paint, carefully applied to bring life to the blank space before me.&lt;/p&gt;
+&lt;p&gt;In this boundless realm of programming, there are no limits to what I can create. From simple scripts to complex algorithms, each project is an opportunity to explore, to innovate, and to push the boundaries of what&amp;rsquo;s possible.&lt;/p&gt;
+&lt;p&gt;And so, my journey in programming began, guided by curiosity and fueled by passion. With every line of code I write, I am reminded of the endless possibilities that lie ahead. This is where my story started, and it&amp;rsquo;s where I know it will continue to evolve and flourish.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sometimes it is the people no one can imagine anything of who do the things no one can imagine..
+&lt;em&gt;~Alan Turing&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>
