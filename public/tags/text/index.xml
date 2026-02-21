@@ -6,35 +6,144 @@
     <description>Recent content in Text on TeXify3</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/text/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/text/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is Floating-Point Decimal?</title>
+      <link>http://localhost:1313/posts/floating-point/</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/floating-point/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;As humans, we have made enormous progress in technology, turning from impossible to possible. From stunning graphics and real-time chat to complex computation that require calculations that are scientific.&lt;/p&gt;
+&lt;p&gt;A famous french visual artist once said.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;L’exactitude n’est pas la vérité.&lt;br&gt;
+Exactitude is not the truth.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It seems that it is also the same in computing. There a figures or numbers that appears to be a precise but hide approximations.&lt;/p&gt;
+&lt;p&gt;And this leads to an important concept in computing: &lt;strong&gt;Floating-Point Decimal Precision&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Okay? What is it?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-floating-point-decimal-precision&#34;&gt;What is Floating-Point Decimal Precision?&lt;/h2&gt;
+&lt;p&gt;It is a number that represents real numbers (numbers with fractional parts) using a format similar to scientific-notation but in base 2 (binary) instead of base 10 (decimal)&lt;/p&gt;
+&lt;p&gt;Alright? I need more.&lt;/p&gt;
+&lt;p&gt;Floating-point numbers are stored as scientific notation in base 2.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+Value = sign x mantissa x base^exponent
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;E.g: in decimal:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+1.23 x 10^2 = 123
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;E.g: in binary: floating-point numbers look more like:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+1.011 x 2^4
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This allows computers to efficiently represent very large and very small numbers-but not all decimal values can be represented exactly in binary.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-do-floating-point-precision-issues-exist&#34;&gt;Why do floating-point precision issues exist?&lt;/h2&gt;
+&lt;h3 id=&#34;the-problem-binary-representation&#34;&gt;The Problem: Binary Representation&lt;/h3&gt;
+&lt;p&gt;Many decimal numbers that are simple for humans cannot be represented exactly in binary.&lt;/p&gt;
+&lt;p&gt;E.g:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
+0.1 (decimal) = 0.00011001100110011... (binary, repeating forever)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Since computers have limited memory, they must truncate or round this repeating binary value. That small rounding error is where problems begin.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;common-issues-with-floating-point-decimals&#34;&gt;Common Issues with Floating-Point Decimals&lt;/h2&gt;
+&lt;h3 id=&#34;precision-and-rounding-errors&#34;&gt;Precision and Rounding Errors&lt;/h3&gt;
+&lt;p&gt;Because of rounding, calculations may produce slightly incorrect results.&lt;/p&gt;
+&lt;p&gt;E.g:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// false
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Actual result:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;0.30000000000000004
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Each operation introduces a tiny error, and over many calculations, those errors can accumulate.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;limited-precision&#34;&gt;Limited Precision&lt;/h3&gt;
+&lt;p&gt;Floating-point numbers have a fixed number of bits to store values. Once that limit is reached:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Extra digits are dropped&lt;/li&gt;
+&lt;li&gt;Accuracy decreases for very long or very small numbers&lt;/li&gt;
+&lt;li&gt;Exact equality comparisons become unreliable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;comparison-problems&#34;&gt;Comparison Problems&lt;/h3&gt;
+&lt;p&gt;Comparing floating-point numbers directly using &lt;code&gt;==&lt;/code&gt; or &lt;code&gt;===&lt;/code&gt; is dangerous.&lt;/p&gt;
+&lt;p&gt;Instead of:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;B&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should compare with a tolerance (epsilon):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// false
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.6&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;result&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;result&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(Math.&lt;span style=&#34;color:#a6e22e&#34;&gt;abs&lt;/span&gt;((&lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1e-9&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;what-is-the-ieee-754-standard&#34;&gt;What Is the IEEE 754 Standard?&lt;/h2&gt;
+&lt;p&gt;The IEEE 754 standard defines how floating-point numbers are stored and computed across almost all modern systems.&lt;/p&gt;
+&lt;h3 id=&#34;key-features-of-ieee-754&#34;&gt;Key Features of IEEE 754&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Defines single precision (32-bit) and double precision (64-bit)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Specifies rounding rules&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Handles special values:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NaN (Not a Number)&lt;/li&gt;
+&lt;li&gt;Infinity&lt;/li&gt;
+&lt;li&gt;-Infinity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;why-it-matters&#34;&gt;Why It Matters&lt;/h3&gt;
+&lt;p&gt;Because almost all programming languages follow IEEE 754, floating-point behavior is consistent across platforms—but the precision limitations are also universal.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;practical-tips-for-handling-floating-point-precision&#34;&gt;Practical Tips for Handling Floating-Point Precision&lt;/h2&gt;
+&lt;h3 id=&#34;1-avoid-floating-point-for-money&#34;&gt;1. Avoid Floating-Point for Money&lt;/h3&gt;
+&lt;p&gt;Never use floating-point numbers for financial calculations.&lt;/p&gt;
+&lt;p&gt;Instead:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use integers (e.g., cents instead of dollars)&lt;/li&gt;
+&lt;li&gt;Use decimal libraries (e.g., BigDecimal, Decimal.js)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-use-rounding-carefully&#34;&gt;2. Use Rounding Carefully&lt;/h3&gt;
+&lt;p&gt;Round values only when displaying, not during internal calculations.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Number(&lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;toFixed&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;3-compare-using-epsilon&#34;&gt;3. Compare Using Epsilon&lt;/h3&gt;
+&lt;p&gt;Always compare floating-point numbers with a tolerance.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Floating-point is not precise by nature. With the help of the standard IEEE 754, it becomes precise.&lt;/p&gt;
+&lt;p&gt;I saw a video that explains it very well. Might as well share it here as an additional great resource.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=dQhj5RGtag0&#34;&gt;https://www.youtube.com/watch?v=dQhj5RGtag0&lt;/a&gt;&lt;/p&gt;
+
+</description>
+    </item>
+    
     <item>
       <title>New Year - New Website</title>
       <link>http://localhost:1313/posts/new-website/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/posts/new-website/</guid>
-      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
-&lt;p&gt;Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Exierant elisi ambit vivere dedere&lt;/li&gt;
-&lt;li&gt;Duce pollice&lt;/li&gt;
-&lt;li&gt;Eris modo&lt;/li&gt;
-&lt;li&gt;Spargitque ferrea quos palude&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Rursus nulli murmur; hastile inridet ut ab gravi sententia! Nomine potitus silentia flumen, sustinet placuit petis in dilapsa erat sunt. Atria tractus malis.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Comas hunc haec pietate fetum procerum dixit&lt;/li&gt;
-&lt;li&gt;Post torum vates letum Tiresia&lt;/li&gt;
-&lt;li&gt;Flumen querellas&lt;/li&gt;
-&lt;li&gt;Arcanaque montibus omnes&lt;/li&gt;
-&lt;li&gt;Quidem et&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;vagus-elidunt&#34;&gt;Vagus elidunt&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Canons_of_page_construction#Van_de_Graaf_canon&#34;&gt;The Van de Graaf Canon&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;mane-refeci-capiebant-unda-mulcebat&#34;&gt;Mane refeci capiebant unda mulcebat&lt;/h3&gt;
-&lt;p&gt;Victa caducifer, malo vulnere contra dicere aurato, ludit regale, voca! Retorsit colit est profanae esse virescere furit nec; iaculi matertera et visa est, viribus. Divesque creatis, tecta novat collumque vulnus est, parvas. &lt;strong&gt;Faces illo pepulere&lt;/strong&gt; tempus adest. Tendit flamma, ab opes virum sustinet, sidus sequendo urbis.&lt;/p&gt;
-&lt;p&gt;Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae vulnus haerentia iuste et exercebat, sui et.&lt;/p&gt;
-&lt;p&gt;Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel &lt;strong&gt;mitis temploque&lt;/strong&gt; vocatus, inque alis, &lt;em&gt;oculos nomen&lt;/em&gt; non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides &lt;strong&gt;parte&lt;/strong&gt;.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;new-year--new-website&#34;&gt;New Year – New Website&lt;/h2&gt;
+&lt;p&gt;A new year always feels like a reset button. The calendar flips, the coffee tastes a little better, and suddenly everything feels possible again. This year, 2026, I decided to welcome that feeling properly — by launching a new website.&lt;/p&gt;
+&lt;p&gt;This site isn’t just a redesign or a technical upgrade. It’s a reflection of where I am right now: hopeful, ambitious, and stubbornly unwilling to give up.&lt;/p&gt;
+&lt;p&gt;The past years have taught me a lot. Some lessons came from wins, others from long nights, failed attempts, and plans that didn’t quite work out. But if there’s one thing I’ve learned, it’s this: progress doesn’t come from never failing — it comes from refusing to stop. Every setback carries a lesson, and every restart carries new energy.&lt;/p&gt;
+&lt;p&gt;That’s what this website represents.&lt;/p&gt;
+&lt;p&gt;It’s a place to build, to share ideas, to document lessons learned, and to keep moving forward even when things get uncomfortable. Some posts here will be technical, some personal, some probably a little rough around the edges — and that’s okay. Growth isn’t polished. It’s honest.&lt;/p&gt;
+&lt;p&gt;I’m entering 2026 with a clear intention: to keep showing up. To keep learning. To keep creating. To keep believing that small, consistent steps can turn into something meaningful over time. No shortcuts. No quitting halfway. Just steady forward motion.&lt;/p&gt;
+&lt;p&gt;If you’re reading this and you’re carrying your own goals, doubts, or unfinished dreams — I hope this space reminds you of something important: you’re allowed to start again. You’re allowed to rebuild. You’re allowed to hope.&lt;/p&gt;
+&lt;p&gt;Here’s to a new year.
+Here’s to a new website.
+And here’s to a 2026 fueled by hope, courage, and a never-give-up spirit&lt;/p&gt;
+
+</description>
     </item>
     
     <item>
@@ -157,114 +266,19 @@ some few highlights that I would like to mention before this year closes.&lt;/p&
       <pubDate>Sat, 22 Jun 2024 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/posts/i-am-also-a-lecturer/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;As humans, we have made enormous progress in technology, turning from impossible to possible. From stunning graphics and real-time chat to complex computation that require calculations that are scientific.&lt;/p&gt;
-&lt;p&gt;A famous french visual artist once said.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;L’exactitude n’est pas la vérité.&lt;br&gt;
-Exactitude is not the truth.&lt;/p&gt;
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Teaching is the profession that teaches all the other professions.
+&lt;em&gt;~Unknown&lt;/em&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;It seems that it is also the same in computing. There a figures or numbers that appears to be a precise but hide approximations.&lt;/p&gt;
-&lt;p&gt;And this leads to an important concept in computing: &lt;strong&gt;Floating-Point Decimal Precision&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Okay? What is it?&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;what-is-floating-point-decimal-precision&#34;&gt;What is Floating-Point Decimal Precision?&lt;/h2&gt;
-&lt;p&gt;It is a number that represents real numbers (numbers with fractional parts) using a format similar to scientific-notation but in base 2 (binary) instead of base 10 (decimal)&lt;/p&gt;
-&lt;p&gt;Alright? I need more.&lt;/p&gt;
-&lt;p&gt;Floating-point numbers are stored as scientific notation in base 2.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
-Value = sign x mantissa x base^exponent
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;E.g: in decimal:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
-1.23 x 10^2 = 123
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;E.g: in binary: floating-point numbers look more like:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
-1.011 x 2^4
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This allows computers to efficiently represent very large and very small numbers-but not all decimal values can be represented exactly in binary.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;why-do-floating-point-precision-issues-exist&#34;&gt;Why do floating-point precision issues exist?&lt;/h2&gt;
-&lt;h3 id=&#34;the-problem-binary-representation&#34;&gt;The Problem: Binary Representation&lt;/h3&gt;
-&lt;p&gt;Many decimal numbers that are simple for humans cannot be represented exactly in binary.&lt;/p&gt;
-&lt;p&gt;E.g:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;
-0.1 (decimal) = 0.00011001100110011... (binary, repeating forever)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Since computers have limited memory, they must truncate or round this repeating binary value. That small rounding error is where problems begin.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;common-issues-with-floating-point-decimals&#34;&gt;Common Issues with Floating-Point Decimals&lt;/h2&gt;
-&lt;h3 id=&#34;precision-and-rounding-errors&#34;&gt;Precision and Rounding Errors&lt;/h3&gt;
-&lt;p&gt;Because of rounding, calculations may produce slightly incorrect results.&lt;/p&gt;
-&lt;p&gt;E.g:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// false
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Actual result:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;0.30000000000000004
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Each operation introduces a tiny error, and over many calculations, those errors can accumulate.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;limited-precision&#34;&gt;Limited Precision&lt;/h3&gt;
-&lt;p&gt;Floating-point numbers have a fixed number of bits to store values. Once that limit is reached:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Extra digits are dropped&lt;/li&gt;
-&lt;li&gt;Accuracy decreases for very long or very small numbers&lt;/li&gt;
-&lt;li&gt;Exact equality comparisons become unreliable&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;comparison-problems&#34;&gt;Comparison Problems&lt;/h3&gt;
-&lt;p&gt;Comparing floating-point numbers directly using &lt;code&gt;==&lt;/code&gt; or &lt;code&gt;===&lt;/code&gt; is dangerous.&lt;/p&gt;
-&lt;p&gt;Instead of:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;A&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;B&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should compare with a tolerance (epsilon):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// false
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.6&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;result&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;result&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1.1&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(Math.&lt;span style=&#34;color:#a6e22e&#34;&gt;abs&lt;/span&gt;((&lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1e-9&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;what-is-the-ieee-754-standard&#34;&gt;What Is the IEEE 754 Standard?&lt;/h2&gt;
-&lt;p&gt;The IEEE 754 standard defines how floating-point numbers are stored and computed across almost all modern systems.&lt;/p&gt;
-&lt;h3 id=&#34;key-features-of-ieee-754&#34;&gt;Key Features of IEEE 754&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Defines single precision (32-bit) and double precision (64-bit)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Specifies rounding rules&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Handles special values:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;NaN (Not a Number)&lt;/li&gt;
-&lt;li&gt;Infinity&lt;/li&gt;
-&lt;li&gt;-Infinity&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;why-it-matters&#34;&gt;Why It Matters&lt;/h3&gt;
-&lt;p&gt;Because almost all programming languages follow IEEE 754, floating-point behavior is consistent across platforms—but the precision limitations are also universal.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;practical-tips-for-handling-floating-point-precision&#34;&gt;Practical Tips for Handling Floating-Point Precision&lt;/h2&gt;
-&lt;h3 id=&#34;1-avoid-floating-point-for-money&#34;&gt;1. Avoid Floating-Point for Money&lt;/h3&gt;
-&lt;p&gt;Never use floating-point numbers for financial calculations.&lt;/p&gt;
-&lt;p&gt;Instead:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Use integers (e.g., cents instead of dollars)&lt;/li&gt;
-&lt;li&gt;Use decimal libraries (e.g., BigDecimal, Decimal.js)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;2-use-rounding-carefully&#34;&gt;2. Use Rounding Carefully&lt;/h3&gt;
-&lt;p&gt;Round values only when displaying, not during internal calculations.&lt;/p&gt;
-&lt;p&gt;Example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Number(&lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;toFixed&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h3 id=&#34;3-compare-using-epsilon&#34;&gt;3. Compare Using Epsilon&lt;/h3&gt;
-&lt;p&gt;Always compare floating-point numbers with a tolerance.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Floating-point is not precise by nature. With the help of the standard IEEE 754, it becomes precise.&lt;/p&gt;
-&lt;p&gt;I saw a video that explains it very well. Might as well share it here as an additional great resource.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=dQhj5RGtag0&#34;&gt;https://www.youtube.com/watch?v=dQhj5RGtag0&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;once-upon-a-time&#34;&gt;Once upon a time&amp;hellip;&lt;/h3&gt;
+&lt;p&gt;after being a professional developer for almost 3 years, and tasks are being repeated. I felt like I was on a whormwhole of my thoughts. Suddenly, I became burnout.&lt;/p&gt;
+&lt;p&gt;Ever heared about &lt;code&gt;Programmers Burnout&lt;/code&gt;? I thought that was just a myth or something that ain&amp;rsquo;t real. But like any other developers who struggle on it. I struggled on it. I looked for ways to overcome burnout and teaching came to my mind first. Fortunately, there&amp;rsquo;s a school near to our house, ofcourse it&amp;rsquo;s a new environment and also lower paycheck. As in, very low paycheck.&lt;/p&gt;
+&lt;h3 id=&#34;heres-an-example-math-of-how-low-the-paycheck-was&#34;&gt;Here&amp;rsquo;s an example math of how low the paycheck was:&lt;/h3&gt;
+&lt;p&gt;Let us say, my previous salary was 18,000 in peso. Denotes
+&lt;code&gt;Sp = 18000&lt;/code&gt; and my teaching job was &lt;code&gt;Sp/2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Solve:&lt;/p&gt;
+&lt;p&gt;C&lt;!-- raw HTML omitted --&gt;p&lt;!-- raw HTML omitted --&gt; = S&lt;!-- raw HTML omitted --&gt;p&lt;!-- raw HTML omitted --&gt; / 2&lt;/p&gt;
+&lt;p&gt;I better not compute it still hurt even though it&amp;rsquo;s 3 years ago now. But I leared alot during in that 1 year of teaching, and it opened alot of opportunity for me. That the lives of the students rely sometimes on the teachers. Teachers can &lt;strong&gt;inspire&lt;/strong&gt; or &lt;strong&gt;destroy&lt;/strong&gt; they&amp;rsquo;re lives. It is crazy to think but that is true.&lt;/p&gt;
 
 </description>
     </item>
